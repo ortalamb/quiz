@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz test</title>
+</head>
+<body>
+<body style="background-color:powderblue;">
+      {% for i, question in enumerate(q) %}
+        <h1>Start your quiz!</h1>
+        <h2>Question # {{i+1}}</h2>
+        {{question}}
+        <form action="/submit" method="post">
+        <label for="ans{{i}}">Your answer is:</label><br>
+        <input type="text" id="ans{{i}}" name="ans{{i}}" value=""><br><br>
+            {%end for%}
+      <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
